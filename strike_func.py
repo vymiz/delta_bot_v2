@@ -1,15 +1,8 @@
-def get_strike(d, price):
-    # d, price = f_read()
-    d2 = {}
-    l = []
+def get_strike(delta, strike, price):
+    diff = []
+    for i in strike:
+        diff.append(abs(i - price))
 
-    # создаем словарь, где разница ЦЕНА-СТРАЙК является ключом, а значением страйк
-    for i in d.keys():
-        d2[str(abs(int(price) - int(i)))] = i
+    d = {k:v for k, v in zip(diff, delta)}
 
-    # создаем лист, состоящий из значений разницы СТРАЙК-ЦЕНА
-    for i in d2.keys():
-        l.append(int(i))
-
-    # возвращаем текущий страйк, расчитанный, а не полученный
-    return d2[str(min(l))]
+    return d[min(d.keys())]

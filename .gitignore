@@ -5,3 +5,6 @@
 *.txt
 tmp*
 *.xls*
+__pycache__/
+/__pycache__/
+/__pycache__
