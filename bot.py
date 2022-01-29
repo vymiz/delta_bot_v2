@@ -27,12 +27,10 @@ while True:
     delta, strike, price = read()
     d, strike_new = get_strike(delta, strike, price)
 
-    '''   TODO it's need to do something with strike changes
     if strike_new != strike_old:  # if strikes are not equal we interrupt this WHILE iteration
         strike_old = strike_new
-        new_pose_size = old_pose_size = 0
+        new_pose_size = old_pose_size = size * d
         continue
-        '''
 
     new_pose_size = size * d
 
