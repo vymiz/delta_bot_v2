@@ -1,2 +1,2 @@
-xl = r'../data/2.xlsm'
+xl = r'../data/data.xlsm'
 out = r'../data/xxx.txt'
