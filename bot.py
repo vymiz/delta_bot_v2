@@ -8,8 +8,8 @@ from erase_func import *
 from math import copysign
 
 size = 1  # pose size
-pause = 5
-trigger_on = 25
+pause = 60
+trigger_on = 2
 trigger = 0
 
 erase()
