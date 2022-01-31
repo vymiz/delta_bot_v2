@@ -53,9 +53,9 @@ while True:
         counter += 1
         f_write(posa, price)
         if counter < 2:
-            print(posa, price)
+            print(posa, price, d)
         else:
-            print(posa, price, summa())
+            print(posa, price, d, summa())
 
     price_old = price
     time.sleep(pause)
