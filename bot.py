@@ -9,7 +9,7 @@ from math import copysign
 
 size = 1  # pose size
 pause = 60
-trigger_on = 2
+trigger_on = 3
 trigger = 0
 
 erase()
@@ -32,14 +32,17 @@ while True:
 
     d, strike_new = get_strike(delta, strike, price)
 
-    if strike_new != strike_old:  # if strikes are not equal we interrupt this WHILE iteration
+    # if strikes are not equal we interrupt this WHILE iteration
+    if strike_new != strike_old:
         strike_old = strike_new
         new_pose_size = old_pose_size = size * d
+        print('\tstrike change\n')
         continue
 
     new_pose_size = size * d
 
-    if price == price_old:  # if prices are the same we increase trigger by 1
+    # if prices are the same we increase trigger by 1
+    if price == price_old:
         trigger += 1
         if trigger >= trigger_on:
             send()
@@ -49,7 +52,8 @@ while True:
     if new_pose_size != old_pose_size:
         large_posa = new_pose_size - old_pose_size
         old_pose_size = new_pose_size
-        posa = int(copysign(1, large_posa))
+        # posa = int(copysign(1, large_posa)) #  reduce pose size to 1 with the same SIGN
+        posa = large_posa
         counter += 1
         f_write(posa, price)
         if counter < 2:

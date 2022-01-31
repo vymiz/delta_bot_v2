@@ -14,6 +14,7 @@ def summa():
         posa.append(int(i[0]))
         price.append(int(i[1]))
 
+    #  here we add the las trade to close opened positions
     posa.append(-sum(posa))
     price.append(price[-1])
 
