@@ -20,4 +20,4 @@ def summa():
     for i in range(len(posa)):
         total.append(posa[i] * price[i])
 
-    return sum(total)
+    return sum(-total)

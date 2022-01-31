@@ -7,7 +7,7 @@ from strike_func import *
 from erase_func import *
 from math import copysign
 
-size = -1  # pose size
+size = 1  # pose size
 pause = 5
 trigger_on = 25
 trigger = 0
@@ -24,7 +24,12 @@ price_old = price
 counter = 0
 
 while True:
-    delta, strike, price = read()
+    try:
+        delta, strike, price = read()
+    except:
+        time.sleep(1)
+        delta, strike, price = read()
+
     d, strike_new = get_strike(delta, strike, price)
 
     if strike_new != strike_old:  # if strikes are not equal we interrupt this WHILE iteration
