@@ -7,7 +7,7 @@ from strike_func import *
 from erase_func import *
 from math import copysign
 
-size = 1  # pose size
+size = -1  # pose size
 pause = 60
 trigger_on = 3
 trigger = 0
