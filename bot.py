@@ -7,8 +7,8 @@ from strike_func import *
 from erase_func import *
 from math import copysign
 
-size = -1  # pose size
-pause = 60
+size = 1  # pose size
+pause = 300
 trigger_on = 3
 trigger = 0
 
@@ -36,7 +36,7 @@ while True:
     if strike_new != strike_old:
         strike_old = strike_new
         new_pose_size = old_pose_size = size * d
-        print('\tstrike change\n')
+        print('strike change')
         continue
 
     new_pose_size = size * d
