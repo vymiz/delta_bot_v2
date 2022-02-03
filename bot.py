@@ -8,8 +8,8 @@ from erase_func import *
 from math import copysign
 
 size = 1  # pose size
-pause = 300
-trigger_on = 3
+pause = 60
+trigger_on = 5
 trigger = 0
 
 erase()
@@ -37,6 +37,12 @@ while True:
         strike_old = strike_new
         new_pose_size = old_pose_size = size * d
         print('strike change')
+        f_write(summa(tmbl=True), price)
+        if counter < 2:
+            print(posa, price)
+        else:
+            print(posa, price, summa())
+        print('*' * 10)
         continue
 
     new_pose_size = size * d
@@ -57,9 +63,9 @@ while True:
         counter += 1
         f_write(posa, price)
         if counter < 2:
-            print(posa, price, d)
+            print(posa, price)
         else:
-            print(posa, price, d, summa())
+            print(posa, price, summa())
 
     price_old = price
     time.sleep(pause)

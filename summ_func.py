@@ -1,6 +1,6 @@
 from adresses import *
 
-def summa():
+def summa(tmbl = False):
     file = open(out, 'r')
     f = file.readlines()
     file.close()
@@ -17,6 +17,9 @@ def summa():
     #  here we add the las trade to close opened positions
     posa.append(-sum(posa))
     price.append(price[-1])
+
+    if tmbl:
+        return sum(posa)
 
     for i in range(len(posa)):
         total.append(posa[i] * price[i])
