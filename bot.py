@@ -38,11 +38,11 @@ while True:
         new_pose_size = old_pose_size = size * d
         print('strike change')
         f_write(summa(tmbl=True), price)
-        if counter < 2:
-            print(posa, price)
-        else:
-            print(posa, price, summa())
-        print('*' * 10)
+        # if counter < 2:
+        #     print(posa, price)
+        # else:
+        #     print(posa, price, summa())
+        # print('*' * 10)
         continue
 
     new_pose_size = size * d
