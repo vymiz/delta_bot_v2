@@ -18,7 +18,7 @@ def summa(tmbl = False):
     posa.append(-sum(posa))
     price.append(price[-1])
 
-    if tmbl:
+    if tmbl and len(posa) > 0:
         return sum(posa)
 
     for i in range(len(posa)):
