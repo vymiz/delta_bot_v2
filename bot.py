@@ -5,7 +5,7 @@ from tb import *
 from write_func import *
 from strike_func import *
 from erase_func import *
-from math import copysign
+# from math import copysign
 
 size = 1  # pose size
 pause = 60

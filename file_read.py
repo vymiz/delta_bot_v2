@@ -1,13 +1,20 @@
 import openpyxl
 from adresses import *
+import time
 
 def read():
     delta = []
     strike = []
     price = 0
-    excel_file = openpyxl.load_workbook(xl)
-    data_sheet = excel_file['src']
-    currently_active_sheet = excel_file.active
+    try:
+        excel_file = openpyxl.load_workbook(xl)
+        data_sheet = excel_file['src']
+    except:
+        time.sleep(1)
+        excel_file = openpyxl.load_workbook(xl)
+        data_sheet = excel_file['src']
+
+    # currently_active_sheet = excel_file.active
 
     cells = data_sheet['A1':'C10']
 
