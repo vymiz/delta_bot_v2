@@ -15,11 +15,12 @@ def summa(tmbl = False):
         price.append(int(i[1]))
 
     #  here we add the las trade to close opened positions
-    posa.append(-sum(posa))
+    r = -sum(posa)
+    posa.append(r)
     price.append(price[-1])
 
     if tmbl and len(posa) > 0:
-        return sum(posa)
+        return r
 
     for i in range(len(posa)):
         total.append(posa[i] * price[i])
