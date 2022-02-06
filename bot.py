@@ -5,7 +5,6 @@ from tb import *
 from write_func import *
 from strike_func import *
 from erase_func import *
-# from math import copysign
 
 size = 1  # pose size
 pause = 60
@@ -38,11 +37,6 @@ while True:
         new_pose_size = old_pose_size = size * d
         print('strike change')
         f_write(summa(tmbl=True), price)
-        # if counter < 2:
-        #     print(posa, price)
-        # else:
-        #     print(posa, price, summa())
-        # print('*' * 10)
         continue
 
     new_pose_size = size * d
@@ -58,7 +52,6 @@ while True:
     if new_pose_size != old_pose_size:
         large_posa = new_pose_size - old_pose_size
         old_pose_size = new_pose_size
-        # posa = int(copysign(1, large_posa)) #  reduce pose size to 1 with the same SIGN
         posa = large_posa
         counter += 1
         f_write(posa, price)
