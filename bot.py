@@ -30,7 +30,7 @@ while True:
         time.sleep(1)
         delta, strike, price = read()
 
-    d, strike_new = get_strike(delta, strike, price)
+    # d, strike_new = get_strike(delta, strike, price)
 
     # # if strikes are not equal we interrupt this WHILE iteration
     # if strike_new != strike_old:
