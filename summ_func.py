@@ -15,7 +15,7 @@ def summa(tmbl = False):
         price.append(int(i[1]))
 
     #  here we add the las trade to close opened positions
-    r = -sum(posa)
+    r = -sum(posa)  # if TMBL True, returns inverted pose size
     posa.append(r)
     price.append(price[-1])
 
