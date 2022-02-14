@@ -55,6 +55,9 @@ while True:
                 print('trend change')
                 print(summa(tmbl=True), price, summa())
                 f_write(summa(tmbl=True), price)
+                old_pose_size = new_pose_size
+                time.sleep(5)
+                continue
 
         large_posa = new_pose_size - old_pose_size
         old_pose_size = new_pose_size
