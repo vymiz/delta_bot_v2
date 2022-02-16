@@ -68,7 +68,7 @@ while True:
         posa = large_posa
         counter += 1
         f_write(posa, price)
-        real_out(summa())
+        real_out(posa)
         if counter < 2:
             print(posa, price)
         else:
