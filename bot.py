@@ -5,6 +5,7 @@ from tb import *
 from write_func import *
 from strike_func import *
 from erase_func import *
+from real_out_func import *
 
 size = 1  # pose size
 pause = 60
@@ -37,6 +38,8 @@ while True:
         new_pose_size = old_pose_size = size * delta
         print('strike change')
         f_write(summa(tmbl=True), price)
+        real_out(summa(tmbl=True))
+
         continue
 
     new_pose_size = size * delta
@@ -55,8 +58,9 @@ while True:
                 print('trend change')
                 print(summa(tmbl=True), price, summa())
                 f_write(summa(tmbl=True), price)
+                real_out(summa(tmbl=True))
                 # old_pose_size = new_pose_size
-                time.sleep(5)
+                time.sleep(pause/2)
                 # continue
 
         large_posa = new_pose_size - old_pose_size
@@ -64,6 +68,7 @@ while True:
         posa = large_posa
         counter += 1
         f_write(posa, price)
+        real_out(summa())
         if counter < 2:
             print(posa, price)
         else:
