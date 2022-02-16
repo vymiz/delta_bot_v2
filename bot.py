@@ -56,9 +56,10 @@ while True:
         if not ((new_pose_size < 0 and old_pose_size > 0) or (new_pose_size > 0 and old_pose_size < 0)):
             if counter > 2:
                 print('trend change')
-                print(summa(tmbl=True), price, summa())
-                f_write(summa(tmbl=True), price)
-                real_out(summa(tmbl=True))
+                posa = summa(tmbl=True)
+                print(posa, price, summa())
+                f_write(posa, price)
+                real_out(posa)
                 # old_pose_size = new_pose_size
                 time.sleep(pause/2)
                 # continue
