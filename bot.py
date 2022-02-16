@@ -37,8 +37,9 @@ while True:
         strike_old = strike_new
         new_pose_size = old_pose_size = size * delta
         print('strike change')
-        f_write(summa(tmbl=True), price)
-        real_out(summa(tmbl=True))
+        posa = summa(tmbl=True)
+        f_write(posa, price)
+        real_out(posa)
 
         continue
 
