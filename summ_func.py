@@ -9,6 +9,8 @@ def summa(tmbl = False):
     price = []
     total = []
 
+    if len(f) == 0: return 0
+
     for i in f:
         i = i.strip().split(',')
         posa.append(int(i[0]))
@@ -26,3 +28,7 @@ def summa(tmbl = False):
         total.append(posa[i] * price[i])
 
     return -sum(total)
+
+
+if __name__ == '__main__':
+    print(summa())

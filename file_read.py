@@ -16,7 +16,7 @@ def read():
 
     # currently_active_sheet = excel_file.active
 
-    cells = data_sheet['A1':'C10']
+    cells = data_sheet['A1':'C20']
 
     for d, s, p in cells:
         # print(f'{delta.value}, {strike.value}, {price.value}')
