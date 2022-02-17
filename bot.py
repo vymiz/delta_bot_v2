@@ -8,7 +8,7 @@ from erase_func import *
 from real_out_func import *
 
 size = 1  # pose size
-pause = 60
+pause = 30
 trigger_on = 5
 trigger = 0
 
